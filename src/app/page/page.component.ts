@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CryptocurrencyService} from '../service/cryptocurrency.service';
 
 @Component({
   selector: 'app-page',
@@ -11,7 +12,7 @@ export class PageComponent implements OnInit {
   public chartData1: Object[];
   public chartData2: Object[];
 
-  constructor() { }
+  constructor(private cryptocurrencyService: CryptocurrencyService) { }
 
   ngOnInit(): void {
     this.chartData1 = [
@@ -39,6 +40,8 @@ export class PageComponent implements OnInit {
       valueType: 'Logarithmic',
       labelFormat: '${value}K'
     };
+
+    this.cryptocurrencyService.createHeader();
   }
 
 

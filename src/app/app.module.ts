@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import {ChartModule, LogarithmicService} from '@syncfusion/ej2-ng-charts';
 import { CategoryService, LegendService, TooltipService } from '@syncfusion/ej2-ng-charts';
 import { DataLabelService, LineSeriesService} from '@syncfusion/ej2-ng-charts';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DataLabelService, LineSeriesService} from '@syncfusion/ej2-ng-charts';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ChartModule
+    ChartModule,
+    HttpClientModule
   ],
   providers: [
     CategoryService,
